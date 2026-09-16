@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Produtos</h1>
+</header>
+
+<main>
+
+    <section>
+        <h2>Sobre a página</h2>
+
+        <p>
+            Esta página apresenta o catálogo de produtos da nossa loja. Aqui você
+            encontra a foto, o nome, o preço e o link com os detalhes de cada
+            produto, além de um formulário para cadastrar novos itens.
+        </p>
+
+        <h2>Descrição</h2>
+
+        <p>
+            Somos uma empresa dedicada à venda de produtos de alta qualidade.
+            Nosso objetivo é oferecer aos nossos clientes uma experiência de
+            compra excepcional, com produtos que atendam às suas necessidades
+            e expectativas. Trabalhamos com uma ampla variedade de produtos,
+            desde eletrônicos e eletrodomésticos até artigos de moda e acessórios.
+            Nossa equipe está sempre pronta para ajudar e garantir que você
+            encontre exatamente o que procura.
+
+            Acreditamos na importância de fornecer informações detalhadas sobre
+            cada produto, incluindo especificações técnicas, avaliações de
+            clientes e recomendações de uso. Isso permite que nossos clientes
+            façam escolhas informadas e aproveitem ao máximo seus produtos.
+
+            Além disso, estamos comprometidos com a sustentabilidade e a
+            responsabilidade social, buscando constantemente maneiras de reduzir
+            nosso impacto ambiental e apoiar causas importantes em nossa comunidade.
+            Agradecemos por escolher nossos produtos e esperamos que você tenha
+            uma experiência de compra agradável e satisfatória.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Produtos</h2>
+
+        <div class="produtos">
+
+            <article class="produto">
+                <img src="smartphone.png" alt="Smartphone XYZ">
+
+                <ul>
+                    <li>
+                        <strong>Produto 1: Smartphone XYZ</strong>
+                    </li>
+                    <li>
+                        R$ 1.999,00
+                    </li>
+                    <li>
+                        <a href="produto-1.html">Ver detalhes</a>
+                    </li>
+                </ul>
+            </article>
+
+
+            <article class="produto">
+                <img src="notebook.png" alt="Notebook ABC">
+
+                <ul>
+                    <li>
+                        <strong>Produto 2: Notebook ABC</strong>
+                    </li>
+                    <li>
+                        R$ 3.499,00
+                    </li>
+                    <li>
+                        <a href="produto-2.html">Ver detalhes</a>
+                    </li>
+                </ul>
+            </article>
+
+
+            <article class="produto">
+                <img src="fone.png" alt="Fone de Ouvido DEF">
+
+                <ul>
+                    <li>
+                        <strong>Produto 3: Fone de Ouvido DEF</strong>
+                    </li>
+                    <li>
+                        R$ 299,00
+                    </li>
+                    <li>
+                        <a href="produto-3.html">Ver detalhes</a>
+                    </li>
+                </ul>
+            </article>
+
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Cadastrar Novo Produto</h2>
+
+        <form action="/produtos" method="post">
+            <p>
+                <label for="nome">Nome do produto</label>
+                <input type="text" id="nome" name="nome" required>
+            </p>
+
+            <p>
+                <label for="preco">Preço (R$)</label>
+                <input type="number" id="preco" name="preco" min="0" step="0.01" required>
+            </p>
+
+            <p>
+                <label for="foto">URL da imagem</label>
+                <input type="url" id="foto" name="foto" required>
+            </p>
+
+            <p>
+                <label for="detalhes">Link para detalhes</label>
+                <input type="url" id="detalhes" name="detalhes" required>
+            </p>
+
+            <p>
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao" rows="4"></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Cadastrar Novo Produto</button>
+            </p>
+        </form>
+    </section>
+
+</main>
+
+
+<footer>
+    <p>Minha loja</p>
+</footer>
+
+</body>
+
+</html>
