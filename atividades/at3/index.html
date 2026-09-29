@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos com carrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Produtos</h1>
+    <button type="button" id="abrir-carrinho">Carrinho (<span id="carrinho-qtd">0</span>)</button>
+</header>
+
+<main>
+
+    <section>
+        <h2>Sobre a página</h2>
+
+        <p>
+            Esta página apresenta o catálogo de produtos da nossa loja. Aqui você
+            encontra a foto, o nome, o preço e o link com os detalhes de cada
+            produto, além de um formulário para cadastrar novos itens.
+        </p>
+
+        <h2>Descrição</h2>
+
+        <p>
+            Somos uma empresa dedicada à venda de produtos de alta qualidade.
+            Nosso objetivo é oferecer aos nossos clientes uma experiência de
+            compra excepcional, com produtos que atendam às suas necessidades
+            e expectativas. Trabalhamos com uma ampla variedade de produtos,
+            desde eletrônicos e eletrodomésticos até artigos de moda e acessórios.
+            Nossa equipe está sempre pronta para ajudar e garantir que você
+            encontre exatamente o que procura.
+        </p>
+
+        <p>
+            Acreditamos na importância de fornecer informações detalhadas sobre
+            cada produto, incluindo especificações técnicas, avaliações de
+            clientes e recomendações de uso. Isso permite que nossos clientes
+            façam escolhas informadas e aproveitem ao máximo seus produtos.
+        </p>
+
+        <p>
+            Além disso, estamos comprometidos com a sustentabilidade e a
+            responsabilidade social, buscando constantemente maneiras de reduzir
+            nosso impacto ambiental e apoiar causas importantes em nossa comunidade.
+            Agradecemos por escolher nossos produtos e esperamos que você tenha
+            uma experiência de compra agradável e satisfatória.
+        </p>
+    </section>
+
+
+    <section>
+        <h2>Produtos</h2>
+
+        <form id="filtros" class="filtros" novalidate>
+            <p>
+                <label for="busca">Buscar produto</label>
+                <input type="search" id="busca" placeholder="Digite o nome do produto">
+            </p>
+            <p>
+                <label for="categoria">Categoria</label>
+                <select id="categoria">
+                    <option value="">Todas</option>
+                    <option>Eletrônicos</option>
+                    <option>Informática</option>
+                    <option>Acessórios</option>
+                </select>
+            </p>
+        </form>
+        <p id="sem-resultados" class="aviso" hidden>Nenhum produto encontrado.</p>
+
+        <div class="produtos">
+
+            <article class="produto" data-categoria="Eletrônicos" data-preco="1999.00">
+                <img src="smartphone.png" alt="Smartphone XYZ">
+                <h3>Smartphone XYZ</h3>
+                <p class="preco">R$ 1.999,00</p>
+                <a href="produto-1.html">Ver detalhes</a>
+                <button type="button" class="comprar">Comprar</button>
+            </article>
+
+            <article class="produto" data-categoria="Informática" data-preco="3499.00">
+                <img src="notebook.png" alt="Notebook ABC">
+                <h3>Notebook ABC</h3>
+                <p class="preco">R$ 3.499,00</p>
+                <a href="produto-2.html">Ver detalhes</a>
+                <button type="button" class="comprar">Comprar</button>
+            </article>
+
+            <article class="produto" data-categoria="Acessórios" data-preco="299.00">
+                <img src="fone.png" alt="Fone de Ouvido DEF">
+                <h3>Fone de Ouvido DEF</h3>
+                <p class="preco">R$ 299,00</p>
+                <a href="produto-3.html">Ver detalhes</a>
+                <button type="button" class="comprar">Comprar</button>
+            </article>
+
+        </div>
+    </section>
+
+
+    <section>
+        <h2>Comparativo de Produtos</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Smartphone XYZ</td>
+                    <td>R$ 1.999,00</td>
+                    <td>Eletrônicos</td>
+                </tr>
+                <tr>
+                    <td>Notebook ABC</td>
+                    <td>R$ 3.499,00</td>
+                    <td>Informática</td>
+                </tr>
+                <tr>
+                    <td>Fone de Ouvido DEF</td>
+                    <td>R$ 299,00</td>
+                    <td>Acessórios</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <section>
+        <h2>Cadastrar Novo Produto</h2>
+
+        <form id="cadastro">
+            <p>
+                <label for="nome">Nome do produto</label>
+                <input type="text" id="nome" name="nome" required>
+            </p>
+
+            <p>
+                <label for="preco">Preço (R$)</label>
+                <input type="number" id="preco" name="preco" min="0" step="0.01" required>
+            </p>
+
+            <p>
+                <label for="foto">Caminho da imagem (ex.: fone.png)</label>
+                <input type="text" id="foto" name="foto" required>
+            </p>
+
+            <p>
+                <label for="nova-categoria">Categoria</label>
+                <select id="nova-categoria" name="categoria" required>
+                    <option>Eletrônicos</option>
+                    <option>Informática</option>
+                    <option>Acessórios</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao" rows="4"></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Cadastrar Novo Produto</button>
+            </p>
+        </form>
+    </section>
+
+    <section>
+        <h2>Fale Conosco</h2>
+
+        <form id="contato" novalidate>
+            <p>
+                <label for="c-nome">Nome</label>
+                <input type="text" id="c-nome" name="nome">
+                <span class="erro" data-erro="c-nome"></span>
+            </p>
+            <p>
+                <label for="c-email">E-mail</label>
+                <input type="email" id="c-email" name="email">
+                <span class="erro" data-erro="c-email"></span>
+            </p>
+            <p>
+                <label for="c-assunto">Assunto</label>
+                <select id="c-assunto" name="assunto">
+                    <option value="">Selecione...</option>
+                    <option>Dúvida</option>
+                    <option>Sugestão</option>
+                    <option>Reclamação</option>
+                </select>
+                <span class="erro" data-erro="c-assunto"></span>
+            </p>
+            <p>
+                <label for="c-mensagem">Mensagem</label>
+                <textarea id="c-mensagem" name="mensagem" rows="4"></textarea>
+                <span class="erro" data-erro="c-mensagem"></span>
+            </p>
+            <p>
+                <button type="submit">Enviar</button>
+            </p>
+            <p id="contato-ok" class="sucesso" hidden>Mensagem enviada com sucesso!</p>
+        </form>
+    </section>
+
+</main>
+
+
+<footer>
+    <p>Minha loja</p>
+</footer>
+
+<div id="modal" class="modal" hidden>
+    <div class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+        <h2 id="modal-titulo">Carrinho</h2>
+        <p id="carrinho-vazio">Seu carrinho está vazio.</p>
+        <table id="carrinho-tabela" hidden>
+            <thead>
+                <tr><th>Produto</th><th>Qtd</th><th>Subtotal</th><th></th></tr>
+            </thead>
+            <tbody id="carrinho-itens"></tbody>
+        </table>
+        <p><strong>Total: <span id="carrinho-total">R$ 0,00</span></strong></p>
+        <button type="button" id="fechar-carrinho">Fechar</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
